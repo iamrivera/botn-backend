@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_09_21_151944) do
     t.string "headline"
     t.string "content"
     t.string "sourcelink"
-    t.string "pocket_id"
+    t.integer "pocket_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

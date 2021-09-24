@@ -4,7 +4,7 @@ class CreateNapkins < ActiveRecord::Migration[6.1]
       t.string :headline
       t.string :content
       t.string :sourcelink
-      t.string :pocket_id
+      t.integer :pocket_id
 
       t.timestamps
     end

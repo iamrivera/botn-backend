@@ -5,7 +5,7 @@ class PocketsController < ApplicationController
   def index
     @pockets = Pocket.all
 
-    render json: @pockets
+    render json: @pockets, include: [:napkins]
   end
 
   # GET /pockets/1
@@ -15,6 +15,7 @@ class PocketsController < ApplicationController
 
   # POST /pockets
   def create
+    # byebug
     @pocket = Pocket.new(pocket_params)
 
     if @pocket.save
