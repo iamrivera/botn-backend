@@ -3,7 +3,8 @@ class NapkinsController < ApplicationController
 
   # GET /napkins
   def index
-    @napkins = Napkin.all
+    pocket = Pocket.find_by(id: params[:pocket_id])
+    @napkins = pocket.napkins
 
     render json: @napkins
   end
