@@ -10,7 +10,7 @@ class PocketsController < ApplicationController
 
   # GET /pockets/1
   def show
-    render json: @pocket
+    render json: @pocket, include: [:napkins]
   end
 
   # POST /pockets
