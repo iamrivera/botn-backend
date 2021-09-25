@@ -9,6 +9,13 @@ class NapkinsController < ApplicationController
     render json: @napkins
   end
 
+  #GET /all_napkins
+  def all_napkins
+    @napkins = Napkin.all
+
+    render json: @napkins
+  end
+
   # GET /napkins/1
   def show
     render json: @napkin
